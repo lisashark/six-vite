@@ -1,0 +1,556 @@
+header {
+  padding-block: 16px;
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  ul {
+    column-gap: 64px;
+    height: 100%;
+  }
+
+  li {
+    height: 100%;
+    display: inline-block;
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    padding-block: 25px;
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    padding-block: 12px 0px;
+
+    .container {
+      flex-direction: column;
+      max-width: 100%;
+      align-items: flex-start;
+      padding-inline: 0;
+    }
+
+    .imgBox {
+      margin-left: 14px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    li {
+      width: 50%;
+      text-align: center;
+      padding-block: 12px;
+      border: 1px solid #fff;
+    }
+  }
+}
+
+.page-home {
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+.home-kvBanner {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 787px;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    padding-block: 25px;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .btn {
+    margin-top: 4px;
+    padding: 6px 12px;
+    width: fit-content;
+    margin-left: auto;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover {
+      transform: translateY(3px);
+      background-color: $darkRed;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    height: 396px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+  }
+}
+
+.home-special {
+  .gridGruop {
+    column-gap: 24px;
+    margin-top: 32px;
+  }
+
+  .card {
+    width: calc((100% - 72px) / 4);
+
+    h3 {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-block: 24px 8px;
+    }
+
+    .imgBox {
+      width: 82px;
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    .gridGruop {
+      gap: 36px 24px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: calc((100% - 24px) / 2);
+
+      p {
+        width: 100%;
+        max-width: 400px;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    .gridGruop {
+      row-gap: 36px;
+    }
+
+    .card {
+      width: 100%;
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.home-classic {
+  h3 {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px;
+    word-break: break-all;
+  }
+
+  .gridGroup {
+    margin-top: 48px;
+    gap: 24px;
+  }
+
+  .card {
+    width: calc((100% - 48px) / 3);
+    display: block;
+    cursor: pointer;
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    .gridGroup {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 336px;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    .gridGroup {
+      margin-top: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 348px;
+    }
+  }
+}
+
+.home-cobranding {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  .card {
+    display: block;
+    width: 50%;
+  }
+
+  picture {
+    height: 240px;
+    display: block;
+    width: 100%;
+
+    source,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .textBox {
+    font-size: 48px;
+    text-align: center;
+    padding-block: 8px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #fff;
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true");
+    background-position: top;
+
+    .flex {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+    .card {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.home-recommand {
+  .flex {
+    margin-top: 48px;
+    gap: 24px;
+
+    .card {
+      width: calc((100% - 72px) / 4);
+      box-shadow: 0px 2px 6px #00000029;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+    }
+
+    .imgBox {
+      height: 306px;
+      width: 100%;
+      border-radius: 4px 4px 0px 0px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .textBox {
+      padding: 16px;
+    }
+
+    .name {
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .review {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-bottom: 72px;
+      height: 48px;
+    }
+
+    time {
+      font-size: 14px;
+      color: #707070;
+    }
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    .flex {
+      flex-wrap: wrap;
+
+      .card {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    .flex {
+      margin-top: 24px;
+      row-gap: 16px;
+
+      .card {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.home-contact {
+  h2 {
+    margin-bottom: 48px;
+  }
+
+  p {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .container {
+    max-width: calc(636px + 72px);
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  textarea,
+  input {
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 6px 12px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 1px solid $red;
+  }
+
+  textarea {
+    height: 136px;
+  }
+
+  label:nth-child(5) {
+    flex-direction: row;
+    align-items: flex-start;
+
+    input {
+      order: -1;
+      width: initial;
+      margin-right: 4px;
+    }
+  }
+
+  button {
+    width: 416px;
+    padding-block: 16px;
+    margin-inline: auto;
+    margin-top: 32px;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(3px);
+      background-color: $darkRed;
+    }
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    .container {
+      max-width: calc(576px + 72px);
+    }
+
+    button {
+      width: 336px;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    button {
+      width: 100%;
+      margin-top: 8px;
+    }
+  }
+}
+
+footer {
+  padding-top: 48px;
+
+  .upperFooter {
+    flex-direction: column;
+  }
+
+  .linkGroup {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    column-gap: 48px;
+  }
+
+  .imgGrid {
+    column-gap: 32px;
+
+    .imgBox {
+      width: 48px;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .contactBtn {
+    font-size: 36px;
+    margin-top: 44px;
+
+    .material-symbols-rounded {
+      font-size: 36px;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+  }
+
+  .contactBtn:last-of-type {
+    margin-top: 8px;
+
+    .material-symbols-rounded {
+      margin-right: 12px;
+    }
+  }
+
+  .bottomFooter {
+    margin-top: 32px;
+    padding-block: 32px;
+    border-top: 1px solid #fff;
+    justify-content: space-between;
+  }
+
+  .privacy {
+    margin-right: 48px;
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    padding-top: 40px;
+
+    .imgGrid {
+      column-gap: 16px;
+
+      .imgBox {
+        width: 40px;
+      }
+    }
+
+    .contactBtn {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    padding-top: 24px;
+
+    .upperFooter {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      ul {
+        display: none;
+      }
+    }
+
+    .contactBtn {
+      margin-top: 8px;
+      font-size: 16px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      .material-symbols-rounded {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+
+    .imgGrid {
+      column-gap: 8px;
+
+      .imgBox {
+        width: 24px;
+      }
+    }
+
+    .bottomFooter {
+      margin-top: 20px;
+      flex-direction: column;
+      padding-block: 20px;
+    }
+
+    .privacy {
+      display: block;
+      margin-block: 8px;
+    }
+  }
+}

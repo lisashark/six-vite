@@ -1,3 +1,4 @@
+//頁首
 header {
   padding-block: 16px;
 
@@ -54,6 +55,134 @@ header {
   }
 }
 
+//頁尾
+footer {
+  padding-top: 48px;
+
+  .upperFooter {
+    flex-direction: column;
+  }
+
+  .linkGroup {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    column-gap: 48px;
+  }
+
+  .imgGrid {
+    column-gap: 32px;
+
+    .imgBox {
+      width: 48px;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .contactBtn {
+    font-size: 36px;
+    margin-top: 44px;
+
+    .material-symbols-rounded {
+      font-size: 36px;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+  }
+
+  .contactBtn:last-of-type {
+    margin-top: 8px;
+
+    .material-symbols-rounded {
+      margin-right: 12px;
+
+      @include mb {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .bottomFooter {
+    margin-top: 32px;
+    padding-block: 32px;
+    border-top: 1px solid #fff;
+    justify-content: space-between;
+  }
+
+  .privacy {
+    margin-right: 48px;
+  }
+
+  @media (max-width: $breakPoint-pad) {
+    padding-top: 40px;
+
+    .imgGrid {
+      column-gap: 16px;
+
+      .imgBox {
+        width: 40px;
+      }
+    }
+
+    .contactBtn {
+      margin-top: 40px;
+    }
+  }
+
+  @media (max-width: $breakPoint-mb) {
+    padding-top: 24px;
+
+    .upperFooter {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      ul {
+        display: none;
+      }
+    }
+
+    .contactBtn {
+      margin-top: 8px;
+      font-size: 16px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      .material-symbols-rounded {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+    }
+
+    .imgGrid {
+      column-gap: 8px;
+
+      .imgBox {
+        width: 24px;
+      }
+    }
+
+    .bottomFooter {
+      margin-top: 20px;
+      flex-direction: column;
+      padding-block: 20px;
+    }
+
+    .privacy {
+      display: block;
+      margin-block: 8px;
+    }
+  }
+}
+
+//首頁
 .page-home {
   h2 {
     font-size: 48px;
@@ -433,124 +562,359 @@ header {
   }
 }
 
-footer {
-  padding-top: 48px;
+//產品頁
+.prodPage-tab {
 
-  .upperFooter {
-    flex-direction: column;
+  @include pad {
+    max-width: 100%;
+    padding-inline: 0px;
   }
 
-  .linkGroup {
-    justify-content: space-between;
-    align-items: center;
+  .tab {
+    width: calc(100% / 3);
+    display: block;
+    font-size: 32px;
+    padding-block: 24px;
+    font-weight: 500;
+    word-break: break-all;
+    border-block: 1px solid #DCDCDC;
+    cursor: pointer;
+
+    &:not(:first-of-type) {
+      border-inline: 1px solid #DCDCDC;
+    }
+
+    &:first-of-type {
+      border-left: 1px solid #DCDCDC;
+    }
+
+    &.active {
+      border-bottom: 8px solid $red;
+    }
+
+    @include pad {
+      font-size: 24px;
+      padding-block: 16px;
+    }
+
+    @include mb {
+      font-size: 16px;
+    }
+  }
+}
+
+.prodPage-cover .imgBox {
+  width: 50%;
+}
+
+.prodPage-tabArea {
+  text-align: center;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 500;
   }
 
-  ul {
-    column-gap: 48px;
+  h2 {
+    font-size: 32px;
   }
 
-  .imgGrid {
-    column-gap: 32px;
+  @include mb {
+
+    h1,
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  .prodList {
+    margin-top: 32px;
+    flex-wrap: wrap;
+    gap: 80px 24px;
+
+    li {
+      width: calc((100% - 24px * 3) / 4);
+    }
 
     .imgBox {
-      width: 48px;
+      width: 100%;
+      height: 168px;
+    }
+
+    @include pad {
+      gap: 40px 24px;
+
+      li {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+
+    @include mb {
+      margin-top: 24px;
+      row-gap: 24px;
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  &.tab2 .prodList {
+
+    li {
+      width: calc((100% - 24px * 2) / 3);
+    }
+
+    .imgBox {
+      height: 224px;
+    }
+
+    @include pad {
+
+      li {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+
+    @include mb {
+
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  .prodDetail {
+    justify-content: space-between;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    .price {
+      font-weight: 500;
+    }
+  }
+
+  .colorBox {
+    column-gap: 8px;
+
+    .box {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      background-color: #5F3E2D;
+
+      &:last-of-type {
+        background-color: #B75929;
+      }
+    }
+  }
+}
+
+.prodPage-tabArea .pageNav {
+  width: fit-content;
+  align-items: center;
+  margin-inline: auto;
+  margin-top: 80px;
+
+  li {
+    height: 48px;
+
+    button {
+      height: 100%;
+      padding-inline: 16px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #555555;
+      border: 1px solid #555555;
+      border-left: 0px;
+      font-size: 18px;
+      align-items: center;
 
       &:hover {
-        transform: translateY(-2px);
+        background-color: #F2F2F2;
       }
-    }
-  }
 
-  .contactBtn {
-    font-size: 36px;
-    margin-top: 44px;
-
-    .material-symbols-rounded {
-      font-size: 36px;
-      vertical-align: middle;
-      margin-right: 20px;
-    }
-  }
-
-  .contactBtn:last-of-type {
-    margin-top: 8px;
-
-    .material-symbols-rounded {
-      margin-right: 12px;
-    }
-  }
-
-  .bottomFooter {
-    margin-top: 32px;
-    padding-block: 32px;
-    border-top: 1px solid #fff;
-    justify-content: space-between;
-  }
-
-  .privacy {
-    margin-right: 48px;
-  }
-
-  @media (max-width: $breakPoint-pad) {
-    padding-top: 40px;
-
-    .imgGrid {
-      column-gap: 16px;
-
-      .imgBox {
-        width: 40px;
+      &.active {
+        background-color: #000;
+        color: #FFF;
       }
     }
 
-    .contactBtn {
-      margin-top: 40px;
+    &:first-of-type button {
+      padding-inline: 12px;
+      border-left: 1px solid #555555;
+      font-size: 19px;
+    }
+
+    &:last-of-type button {
+      padding-inline: 12px;
+      font-size: 19px;
     }
   }
 
-  @media (max-width: $breakPoint-mb) {
-    padding-top: 24px;
+  @include mb {
 
-    .upperFooter {
-      justify-content: space-between;
-      flex-direction: row-reverse;
-      align-items: flex-start;
+    margin-top: 64px;
+    flex-wrap: wrap;
+    row-gap: 6px;
 
-      ul {
-        display: none;
-      }
-    }
+    li {
+      height: 45px;
 
-    .contactBtn {
-      margin-top: 8px;
-      font-size: 16px;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-
-      .material-symbols-rounded {
+      button {
+        padding-inline: 15px;
         font-size: 16px;
-        margin-right: 10px;
+      }
+
+      &:last-of-type button,
+      &:first-of-type button {
+        font-size: 16px;
       }
     }
+  }
+}
 
-    .imgGrid {
+//門市頁
+
+.page-store {
+  h1 {
+    margin-block: 96px 32px;
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 8px solid #9F1213;
+
+    @include pad {
+      margin-top: 84px;
+    }
+
+    @include mb {
+      margin-top: 40px;
+      font-size: 24px;
+    }
+  }
+
+  .select {
+    column-gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    p {
+      font-size: 24px;
+    }
+
+    @include mb {
       column-gap: 8px;
 
-      .imgBox {
-        width: 24px;
+      p {
+        font-size: 16px;
       }
     }
 
-    .bottomFooter {
-      margin-top: 20px;
-      flex-direction: column;
-      padding-block: 20px;
+    select {
+      width: 100%;
+      max-width: 304px;
+      border: 1px solid #CED4DA;
+      font-size: 18px;
+      color: #495057;
+      padding: 6px 12px 4px;
+      opacity: 0.75;
+      background-color: #FFF;
+
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      position: relative;
+      background-image: url('../images/arrow_drop.png');
+      background-position: right 12px center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &:focus {
+        border: 1px solid $darkRed;
+        outline: 1px solid $darkRed
+      }
+    }
+  }
+
+  .cardGroup {
+    gap: 48px 24px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+
+    .card {
+      width: calc((100% - 24px * 2) / 3);
     }
 
-    .privacy {
+    @include pad {
+      gap: 24px;
+
+      .card {
+        width: calc((100% - 24px) / 2);
+      }
+    }
+
+    @include mb {
+      margin-top: 24px;
+      margin-bottom: 64px;
+
+      .card {
+        width: 100%;
+      }
+    }
+
+    a {
       display: block;
-      margin-block: 8px;
+      background-color: #000;
+      color: #FFF;
+      text-align: center;
+      font-size: 19px;
+      padding-block: 16px;
+      line-height: 1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+
+  .imgBox {
+    height: 224px;
+    width: 100%;
+  }
+
+
+  h2 {
+    color: #212529;
+    font-size: 24px;
+    padding: 8px 24px;
+    border: 1px solid #00000020;
+  }
+
+  .detail {
+    padding: 22px 24px;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #00000020;
+    border-top: 0;
+  }
+
+  .item {
+    color: #212529;
+    font-size: 20px;
+    column-gap: 11px;
+    align-items: center;
+
+    &:last-of-type {
+      align-items: flex-start;
+
+      span {
+        padding-top: 3px;
+      }
     }
   }
 }

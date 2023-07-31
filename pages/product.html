@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,user-scalable=no,maximun-scale=1.0,minimum-scale=1.0" />
+    <link rel="stylesheet" href="../assets/scss/style.scss" />
+    <title>系列鏡框 | Glasses成為您的眼</title>
+    <script>
+        function openTab(evt, tabName) {
+            var tabs = document.getElementsByClassName("prodPage-tabArea");
+            var tabButtons = document.getElementsByClassName("tab");
+
+            // 隱藏所有tab內容，並將tab-button設置為非active狀態
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.add('none');
+                tabButtons[i].classList.remove("active");
+            }
+
+            // 顯示選中的tab內容，並將相應的tab-button設置為active狀態
+            document.getElementById(tabName).classList.remove('none');
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</head>
+
+<body>
+    <%- include('./layout/header'); -%>
+        <main>
+            <section class="prodPage-tab container flex">
+                <button class="tab active" onclick="openTab(event, 'tab1')">OPTICAL</button>
+                <button class="tab" onclick="openTab(event, 'tab2')">SUNGLASSES</button>
+                <button class="tab">FUNCTIONAL</button>
+            </section>
+            <section id="tab1" class="prodPage-tabArea tab1">
+                <section class="prodPage-cover flex">
+                    <picture class="imgBox">
+                        <source
+                            srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-1.png?raw=true"
+                            media="(min-width: 991.988px)">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-1.png?raw=true"
+                            alt="good glasses">
+                    </picture>
+                    <picture class="imgBox">
+                        <source
+                            srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-2.png?raw=true"
+                            media="(min-width: 991.988px)">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-2.png?raw=true"
+                            alt="girl glasses">
+                    </picture>
+                </section>
+                <section class="tab-maincontent container pdb-80-40m">
+                    <h1>Celluloid Combi</h1>
+                    <h2>賽璐珞鈦金屬混合鏡框</h2>
+                    <ul class="prodList flex">
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-1.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-2.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-3.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-4.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-5.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-6.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-7.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-8.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-9.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-10.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb none-pad">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-11.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb none-pad">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-12.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="pageNav flex">
+                        <li><button class="flex"><span>上一頁</span></button></li>
+                        <li><button class="flex"><span>1</span></button></li>
+                        <li><button class="active flex"><span>2</span></button></li>
+                        <li><button class="flex"><span>3</span></button></li>
+                        <li><button class="flex"><span>4</span></button></li>
+                        <li><button class="flex"><span>5</span></button></li>
+                        <li><button class="flex"><span>下一頁</span></button></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="tab2" class="prodPage-tabArea tab2 none">
+                <section class="prodPage-cover flex">
+                    <picture class="imgBox">
+                        <source
+                            srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-3.png?raw=true"
+                            media="(min-width: 991.988px)">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-3.png?raw=true"
+                            alt="good glasses">
+                    </picture>
+                    <picture class="imgBox">
+                        <source
+                            srcset="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-4.png?raw=true"
+                            media="(min-width: 991.988px)">
+                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-header-sm-4.png?raw=true"
+                            alt="girl glasses">
+                    </picture>
+                </section>
+                <section class="tab-maincontent container pdb-80-40m">
+                    <h1>2020 NEW COLLECTION</h1>
+                    <h2>賽璐珞鈦金屬混合鏡框</h2>
+                    <ul class="prodList flex">
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-7.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-8.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-9.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-10.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-11.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                        <li class="none-mb">
+                            <div class="imgBox"><img
+                                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/product-12.png?raw=true">
+                            </div>
+                            <div class="prodDetail flex">
+                                <h4>BJ41600S</h4>
+                                <h4 class="red price">NTD3,490</h4>
+                            </div>
+                            <div class="colorBox flex">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="pageNav flex">
+                        <li><button class="flex"><span>上一頁</span></button></li>
+                        <li><button class="flex"><span>1</span></button></li>
+                        <li><button class="active flex"><span>2</span></button></li>
+                        <li><button class="flex"><span>3</span></button></li>
+                        <li><button class="flex"><span>4</span></button></li>
+                        <li><button class="flex"><span>5</span></button></li>
+                        <li><button class="flex"><span>下一頁</span></button></li>
+                    </ul>
+                </section>
+            </section>
+        </main>
+        <%- include('./layout/footer'); -%>
+
+            <script type="module" src="../main.js"></script>
+</body>
+
+</html>

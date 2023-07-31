@@ -2,18 +2,33 @@ $breakPoint-mb: 767.98px;
 $breakPoint-pad: 991.988px;
 
 .container {
-  max-width: calc(1296px + 72px);
-  padding-inline: 36px;
+  max-width: calc(1296px + 24px);
+  padding-inline: 12px;
   margin-inline: auto;
 
   @media (max-width: $breakPoint-pad) {
     max-width: calc(696px + 72px);
+    padding-inline: 36px;
   }
 
   @media (max-width: $breakPoint-mb) {
     padding-inline: 14px;
   }
 }
+
+
+@mixin pad {
+  @media(max-width:$breakPoint-pad) {
+    @content;
+  }
+}
+
+@mixin mb {
+  @media(max-width:$breakPoint-mb) {
+    @content;
+  }
+}
+
 
 .flex {
   display: flex;
@@ -22,6 +37,24 @@ $breakPoint-pad: 991.988px;
 .block {
   display: block;
 }
+
+
+.none {
+  display: none;
+}
+
+.none-mb {
+  @media (max-width:$breakPoint-mb) {
+    display: none;
+  }
+}
+
+.none-pad {
+  @media (max-width:$breakPoint-pad) and (min-width:$breakPoint-mb) {
+    display: none;
+  }
+}
+
 
 .pdb-80-40m {
   padding-block: 80px;
